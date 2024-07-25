@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teja's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about-me')">About Me</a></li>
+                <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>  
+
+        <div id="home" class="info">
+            <h1>I Am <span>Sri Teja Mallavarapu.</span></h1>
+            <p>I am an enthusiastic and dedicated student pursuing 3rd year with a passion for learning and personal growth. My academic journey has been marked by a strong commitment to computer science that drives me to explore new ideas and concepts. I thrive in collaborative environments, where I can contribute my skills and creativity to achieve common goals.I am actively involved in various extracurricular activities, which have helped me develop leadership qualities and a well-rounded perspective. With a keen interest in computer science , I am eager to gain more knowledge and  to make meaningful contributions in academic.</p>
+        </div> 
+
+        <div id="about-me" class="info2"> 
+            <h2>About <span>Me</span></h2>
+            <label for="about-me-textbox">EDUCATION:</label>
+            <img src="teja portpic.jpeg" alt="Contact Image" style="width: 300px; height: 400px; float: right; ">
+            <ul>
+                <li>2022-2026: BTech(CSE)<br>SRM University/CGPA-7.4</li><br>
+                <li>2020-2022: Intermediate<br>Bhashyam junior collage/percentage-93%</li><br>
+                <li>2020: CBSE<br>Bhashyam Blooms/percentage-89%</li>
+            </ul>
+            <label for="about-me-textbox">SKILLS:</label>
+            <ul>
+                <li>C LANGUAGE</li>
+                <li>C++</li>
+                <li>Data Structures</li>
+                <li>Database Management System(DBMS)</li>
+                <li>Frontend(HTML,CSS,JAVA SCRIPT)</li>
+                <li>Python</li>
+            </ul>
+        </div>
+
+
+        <div id="experience" class="info3">
+            <h2>Experience</h2>
+            <div class="experience-column">
+                
+                <p>I am interested in coding because it allows me to create and innovate in ways that can transform ideas into reality. The problem-solving aspect of coding challenges me to think critically and analytically. I use various programming languages like C, C++,Python,and Javascript to create software, websites and more.</p>
+            </div>
+            <div class="experience-column">
+                
+                <p>I have no prior industrial experience in the field, but I have demonstrated my capability through various projects completed during my time in college. These projects have equipped me with practical skills and a solid understanding of the concepts needed for the industry.</p>
+            </div>
+            <div class="experience-column">
+                <h3>Projects:</h3>
+                <ul>
+                    <li>Electricity Bill System using C language</li>
+                    <li>Student Record Management System using C++</li>
+                    <li>Student Management System using Data Structures in C language</li>
+                    <li>Library Management System using Data Structures in C language</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div id="contact" class="info4">
+            <h2>Contact Me!</h2>
+            <h3>Email address - m.sriteja1269@gmail.com</h3>
+            <h3>Mobile Number - 8341373652 </h3>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label> 
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/your-profile" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/your-profile" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.info, #about-me, #experience, #contact').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show the home section by default
+        showSection('home');
+    </script>
+</body>
+</html>
